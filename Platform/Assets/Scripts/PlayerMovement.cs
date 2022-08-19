@@ -25,6 +25,11 @@ public class PlayerMovement : MonoBehaviour
             transform.position += new Vector3(Input.GetAxis("Horizontal") * 5 * Time.deltaTime, 0, 0); // ps: deltaTime converts everything into persecond
             this.GetComponent<SpriteRenderer>().flipX = true; // Invert render position in X axis.
         }
+        //Jumping
+        if(Input.GetButtonDown("Jump"))
+        {
+            this.GetComponent<Rigidbody2D>().AddForce(new Vector3(0, 6, 0), ForceMode2D.Impulse);
+        }
 
     }
 }
