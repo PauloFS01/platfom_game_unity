@@ -18,17 +18,23 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.position += new Vector3(Input.GetAxis("Horizontal") * 5 * Time.deltaTime, 0, 0); // ps: deltaTime converts everything into persecond
             this.GetComponent<SpriteRenderer>().flipX = false; // Invert render position in X axis.
+            GetComponent<Animator>().SetBool("isRuning", true);
         }
         //Movement Left
         if (Input.GetAxis("Horizontal") < 0)
         {
             transform.position += new Vector3(Input.GetAxis("Horizontal") * 5 * Time.deltaTime, 0, 0); // ps: deltaTime converts everything into persecond
             this.GetComponent<SpriteRenderer>().flipX = true; // Invert render position in X axis.
+            GetComponent<Animator>().SetBool("isRuning", true);
         }
-        //Jumping
-        if(Input.GetButtonDown("Jump"))
+        if (Input.GetAxis("Horizontal") == 0)
         {
-            this.GetComponent<Rigidbody2D>().AddForce(new Vector3(0, 6, 0), ForceMode2D.Impulse);
+            GetComponent<Animator>().SetBool("isRuning", false);
+        }
+            //Jumping
+            if (Input.GetButtonDown("Jump"))
+        {
+            this.GetComponent<Rigidbody2D>().AddForce(new Vector3(0, 6, 0), ForceMode2D.Impulse);// add vertical force
         }
 
     }
