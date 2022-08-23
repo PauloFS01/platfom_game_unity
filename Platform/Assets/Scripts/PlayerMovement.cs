@@ -42,6 +42,8 @@ public class PlayerMovement : MonoBehaviour
         {
             this.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             this.GetComponent<Rigidbody2D>().AddForce(jumpHeight, ForceMode2D.Impulse);// add vertical force
+            this.GetComponent<AudioSource>().Play();
+            this.GetComponent<AudioSource>().pitch = Random.Range(0.8f, 1.3f);
             NumberOfJumpsLeft -= 1;
         }
 
