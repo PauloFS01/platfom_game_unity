@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetButtonDown("Jump") && NumberOfJumpsLeft > 0)
         {
             this.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-            this.GetComponent<Rigidbody2D>().AddForce(new Vector3(0, 6, 0), ForceMode2D.Impulse);// add vertical force
+            this.GetComponent<Rigidbody2D>().AddForce(jumpHeight, ForceMode2D.Impulse);// add vertical force
             NumberOfJumpsLeft -= 1;
         }
 
