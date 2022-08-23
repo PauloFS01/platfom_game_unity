@@ -278,13 +278,13 @@ GameObject:
   m_Component:
   - component: {fileID: 676022762}
   - component: {fileID: 676022761}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BG1_Forest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &676022761
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -366,9 +366,9 @@ GameObject:
   - component: {fileID: 736417504}
   - component: {fileID: 736417508}
   - component: {fileID: 736417509}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -499,6 +499,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2cffd0a22f262844b30231090dd408d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
+  jumpHeight: {x: 0, y: 0, z: 0}
+  NumberOfJumpsLeft: 0
+  MaxNumberOfJumps: 3
 --- !u!95 &736417509
 Animator:
   serializedVersion: 4
