@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8818813957686038107}
   - component: {fileID: 59917906732154470}
   - component: {fileID: 1893135396}
+  - component: {fileID: 5790232110681147820}
   m_Layer: 0
   m_Name: item_coin
   m_TagString: Untagged
@@ -97,7 +98,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.026307523, y: 0.033230573}
@@ -134,7 +135,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 01285d08ec07f374bb1ff19157920ac9, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -219,3 +220,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5790232110681147820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565439082551031720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ad352e0065580f45b67ecb92b59bab4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScriptTarget: {fileID: 0}
