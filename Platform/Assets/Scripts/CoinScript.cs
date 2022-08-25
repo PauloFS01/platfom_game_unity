@@ -8,6 +8,11 @@ public class CoinScript : MonoBehaviour
 
     public Object ScriptTarget;
 
+    private void Awake()
+    {
+        GameObject.Find("ScriptObject").GetComponent<ScriptObjectScript>().CoinsNeededToWin += 1;
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))

@@ -1,21 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ScriptObjectScript : MonoBehaviour
+public class LoadSceneByButtonPress : MonoBehaviour
 {
-    public int Coins;
-    public int CoinsNeededToWin;
     public string SceneToLoad;
 
-    private void Update()
+    // Update is called once per frame
+    void Update()
     {
-        if(Coins >= CoinsNeededToWin)
+        if (Input.GetButtonDown("Jump"))
         {
             SceneManager.LoadScene(SceneToLoad);
         }
+        
     }
-
 }
