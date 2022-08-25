@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -54,6 +55,14 @@ public class PlayerMovement : MonoBehaviour
         if(collision.gameObject.CompareTag("ground"))
         {
             NumberOfJumpsLeft = MaxNumberOfJumps;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("deathmarker"))
+        {
+            SceneManager.LoadScene("GameOver");
         }
     }
 }
