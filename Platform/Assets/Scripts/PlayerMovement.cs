@@ -50,19 +50,15 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.CompareTag("ground"))
-        {
-            NumberOfJumpsLeft = MaxNumberOfJumps;
-        }
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("deathmarker"))
         {
             SceneManager.LoadScene("GameOver");
+        }
+        if (other.gameObject.CompareTag("ground"))
+        {
+            NumberOfJumpsLeft = MaxNumberOfJumps;
         }
     }
 }
