@@ -11,6 +11,8 @@ public class CameraFollowScrpt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (TargetPlayer)
+        {
         // Move Y camera
         if (TargetPlayer.transform.position.y > yMinimum && TargetPlayer.transform.position.y < yMaximum)
         {
@@ -21,6 +23,7 @@ public class CameraFollowScrpt : MonoBehaviour
         else
         {
             this.transform.position = new Vector3(TargetPlayer.transform.position.x, this.transform.position.y, this.transform.position.z);
+        }
         }
     }
 }

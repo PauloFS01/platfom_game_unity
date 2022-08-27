@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 jumpHeight;
     public int NumberOfJumpsLeft;
     public int MaxNumberOfJumps;
+    public GameObject DeathObject;
 
     // Start is called before the first frame update
     void Start()
@@ -54,11 +55,17 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("deathmarker"))
         {
-            SceneManager.LoadScene("GameOver");
+            DeathMethod();
         }
         if (other.gameObject.CompareTag("ground"))
         {
             NumberOfJumpsLeft = MaxNumberOfJumps;
         }
+    }
+
+    private void DeathMethod()
+    {
+        Instantiate(DeathObject, this.transform.position, this.transform.rotation);
+        Destroy(this.gameObject);
     }
 }

@@ -153,6 +153,7 @@ MonoBehaviour:
   jumpHeight: {x: 0, y: 15, z: 0}
   NumberOfJumpsLeft: 0
   MaxNumberOfJumps: 3
+  DeathObject: {fileID: 8389384762086745515, guid: 57a4408939b060848a98687c5074386f, type: 3}
 --- !u!95 &5818979179036927161
 Animator:
   serializedVersion: 4
